@@ -1,13 +1,16 @@
 function palindrome(myString) {
   var input = myString.replace(/[^A-Z0-9]/gi, "").toLowerCase();
-
   var reversedInput = input.split("").reverse().join("");
 
-  if (input === reverseInput) {
-    document.write("<div>" + myString + " is a palindrom <div>");
+  var result = document.createElement("div");
+
+  if (input === reversedInput) {
+    result.textContent = myString + " is a palindrome";
   } else {
-    document.write("<div>" + myString + " is not a palindrom <div>");
+    result.textContent = myString + " is not a palindrome";
   }
+
+  document.body.appendChild(result);
 }
 
-palindrom("madam");
+palindrome("madam");
