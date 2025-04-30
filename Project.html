@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Color Changing Button</title>
+    <style>
+      #colorButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        background-color: lightblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="colorButton" onclick="changeColor()">Click Me!</button>
+
+    <script>
+      const colors = ["red", "green", "blue", "orange", "purple", "teal"];
+      var currentColorIndex = 0;
+
+      function changeColor() {
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+        document.getElementById("colorButton").style.backgroundColor =
+          colors[currentColorIndex];
+      }
+    </script>
+  </body>
+</html>
